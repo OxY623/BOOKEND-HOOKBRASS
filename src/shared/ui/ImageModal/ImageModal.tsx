@@ -23,7 +23,7 @@ function ImageModal({
                <button 
                  title="Close"
                  onClick={onClose}
-                 className="absolute -top-12 right-0 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors"
+                 className="absolute -top-9 right-0 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors"
                >
                  <X className="w-8 h-8" />
                </button>
