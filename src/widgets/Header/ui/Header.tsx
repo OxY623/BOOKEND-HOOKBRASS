@@ -28,7 +28,7 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
                 img.src = src;
                 img.onload = () => resolve(src);
                 img.onerror = (err) => {
-                  console.error(`Ошибка загрузки изображения: ${src}`, err);
+                  // console.error(`Ошибка загрузки изображения: ${src}`, err);
                   reject(err); // Не прерываем цепочку, а просто логируем
                 };
               })
@@ -38,7 +38,7 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
         console.error("Image preload failed", error);
       } finally {
         if (isMounted) {
-          console.log("Все изображения загружены, отключаем isLoading");
+          // console.log("Все изображения загружены, отключаем isLoading");
           setIsLoading(false);
         }
       }
