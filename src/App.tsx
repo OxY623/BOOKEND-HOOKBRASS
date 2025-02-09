@@ -61,6 +61,12 @@ export const hookbrassCollection: GalleryItem[] = [
     description: "This striking hook takes the form of an ancient warrior, evoking the strength, bravery, and honor of legendary fighters. Crafted with intricate details, it showcases the stoic stance and power of a warrior in armor, symbolizing protection and courage. Perfect for adding a bold, historical touch to any space, this hook brings an air of ancient heroism to your home. Whether placed in an entryway, bedroom, or study, it serves as both a functional piece and a tribute to the spirit of warriors from a bygone era.",
     price: "$66"
   },
+  {
+    src: "/hooksbrass/IMG_4375.jpg",
+    title: "Antique Hummingbird Hook",
+    description: "This delicately designed hook takes the graceful form of a hummingbird, crafted with antique-inspired detailing. With its elegant posture and intricate featherwork, it captures the timeless beauty of this tiny, yet mighty bird. The hook brings an air of vintage charm and nature’s delicate balance to any room. Ideal for adding a touch of sophistication to your home decor, this piece is perfect for hanging accessories, coats, or simply as a statement of artistic craftsmanship. Its antique design evokes a sense of nostalgia and timeless elegance, merging nature with artistry.",
+    price: "$66"
+  },
   
 ];
 
