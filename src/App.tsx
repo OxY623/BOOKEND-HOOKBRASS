@@ -147,7 +147,8 @@ function App() {
               <span>hookbrass@gmail.com</span>
             </a>
             <a href="https://www.instagram.com/hookbrass3" 
-            // target="_blank" rel="noopener noreferrer" 
+             target="_blank" 
+             rel="noopener noreferrer" 
              className="flex items-center gap-2 hover:text-[#c2beb6] transition-colors">
               <Instagram className="w-5 h-5" />
               <span>@hookbrass3</span>
