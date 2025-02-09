@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, Mail, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Header } from './widgets/Header';
 
 interface GalleryItem {
   src: string;
@@ -194,10 +195,23 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <div className="text-white text-2xl font-light tracking-wider animate-pulse">
+          Loading...
+        </div>
+      </div>
+    );
+  }
+
+
   return (
     <div className="bg-[#f9f6f0] min-h-screen">
       {/* Hero Section */}
-      <header className="relative h-screen">
+      {/* <header className="relative h-screen">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -217,7 +231,8 @@ function App() {
           </p>
           <ChevronDown className="absolute bottom-12 w-8 h-8 animate-bounce" />
         </div>
-      </header>
+      </header> */}
+      <Header isLoading={isLoading} setIsLoading={setIsLoading} />
 
       {/* Introduction */}
       <section className="py-24 px-4 bg-[#f9f6f0]">

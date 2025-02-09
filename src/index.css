@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes fadeIn {
+         from {
+           opacity: 0;
+           transform: translateY(20px);
+         }
+         to {
+           opacity: 1;
+           transform: translateY(0);
+         }
+       }
+       
+       .animate-fade-in {
+         animation: fadeIn 1.5s ease-out forwards;
+       }
+       
+       /* Smooth font rendering */
+       html {
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         @apply bg-black;
+       }
+       
+       /* Ensure smooth transitions */
+       * {
+         backface-visibility: hidden;
+         -webkit-backface-visibility: hidden;
+       }
+       
+       /* Custom scrollbar */
+       ::-webkit-scrollbar {
+         width: 8px;
+       }
+       
+       ::-webkit-scrollbar-track {
+         @apply bg-black/20;
+       }
+       
+       ::-webkit-scrollbar-thumb {
+         @apply bg-white/20 rounded-full hover:bg-white/30 transition-colors;
+       }
