@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { backgroundImages } from '../../../shared/assets/data';
 import { ChevronDown, ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 import './Header.css'
+import { BackgroundImage } from '../../../shared/ui/BackgroundImage/BackgroundImage';
 
 
 
@@ -116,17 +117,18 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
       <header className="relative h-screen overflow-hidden">
         {/* Background images */}
         {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-contain bg-no-repeat bg-center transition-all duration-1500 ease-in-out ${
-              index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
-            }`}
-            style={{
-              backgroundImage: `url("${image}")`,
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
-          </div>
+           <BackgroundImage key={index} src={image} isVisible={index === currentImageIndex} />
+          // <div
+          //   key={index}
+          //   className={`absolute inset-0 bg-contain bg-no-repeat bg-center transition-all duration-1500 ease-in-out ${
+          //     index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
+          //   }`}
+          //   style={{
+          //     backgroundImage: `url("${image}")`,
+          //   }}
+          // >
+          //   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
+          // </div>
         ))}
 
         {/* Current image number */}
