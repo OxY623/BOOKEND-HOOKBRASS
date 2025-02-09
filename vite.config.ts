@@ -30,8 +30,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  // build: {
+  build: {
   //   ssr: false,
-  //   minify: 'terser', // Включение минификации для продакшн
-  // },
+  minify: 'terser', // Включение минификации для продакшн
+ },
 });
