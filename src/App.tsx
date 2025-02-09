@@ -142,13 +142,13 @@ function App() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-12 tracking-wide">Connect With Us</h2>
           <div className="flex justify-center gap-8 mb-8">
-            <a href="mailto:hookbrass@gmail.com" className="flex items-center gap-2 hover:text-[#c2beb6] transition-colors">
+            <a href="mailto:hookbrass3@gmail.com" className="flex items-center gap-2 hover:text-[#c2beb6] transition-colors">
               <Mail className="w-5 h-5" />
               <span>hookbrass@gmail.com</span>
             </a>
-            <a href="#" className="flex items-center gap-2 hover:text-[#c2beb6] transition-colors">
+            <a href="https://www.instagram.com/hookbrass3" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#c2beb6] transition-colors">
               <Instagram className="w-5 h-5" />
-              <span>@hookbrass</span>
+              <span>@hookbrass3</span>
             </a>
           </div>
         </div>
