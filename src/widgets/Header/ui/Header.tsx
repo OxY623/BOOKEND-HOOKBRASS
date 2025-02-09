@@ -145,14 +145,23 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
         {/* Content */}
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4 select-none">
           <div className="space-y-8 text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-light tracking-[0.2em] mb-6 transition-all duration-700 animate-fade-in">
+            {/* <h1 className="bg-gray-200/10 rounded-lg text-4xl text-black  hover:shadow-lg  sm:text-5xl md:text-7xl font-light tracking-[0.2em] mb-6 transition-all duration-700 animate-fade-in">
               BOOKEND & HOOKBRASS
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wider max-w-3xl mx-auto leading-relaxed text-white/90">
+            <p className="bg-gray-200/10 rounded-lg text-lg sm:text-xl md:text-2xl text-black text-black  hover:shadow-lg font-light tracking-wider max-w-3xl mx-auto leading-relaxed text-white/90">
               Exquisite bas-relief artworks in bronze and brass,
               <br className="hidden sm:block" />
               crafting tomorrow's antiques today
+            </p> */}
+            <h1 className="bg-gray-200/10 rounded-lg text-4xl text-white hover:shadow-lg sm:text-5xl md:text-7xl font-light tracking-[0.2em] mb-6 transition-all duration-700 animate-fade-in">
+              BOOKEND & HOOKBRASS
+            </h1>
+           <p className="bg-gray-200/10 rounded-lg text-lg sm:text-xl md:text-2xl text-white hover:shadow-lg font-light tracking-wider max-w-3xl mx-auto leading-relaxed text-white/90">
+                 Exquisite bas-relief artworks in bronze and brass,
+            <br className="hidden sm:block" />
+              crafting tomorrow's antiques today
             </p>
+
           </div>
           <button onClick={onScroll} title="See more details" className="absolute animate-bounce bottom-9 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 group"
             aria-label="See more details">
