@@ -2,18 +2,25 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 import viteCompression from 'vite-plugin-compression';
-import imagemin from 'vite-plugin-imagemin';
+// import imagemin from 'vite-plugin-imagemin';
+import viteImagemin from '@vheemstra/vite-plugin-imagemin'
+
+// The minifiers you want to use:
+import imageminMozjpeg from 'imagemin-mozjpeg'
+import imageminWebp from 'imagemin-webp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), 
     svgr(), 
-    imagemin({
-      optipng: {
-        optimizationLevel: 5,
+    viteImagemin({
+      plugins: {
+        jpg: imageminMozjpeg(),
       },
-      mozjpeg: {
-        quality: 80,
+      makeWebp: {
+        plugins: {
+          jpg: imageminWebp(),
+        },
       },
     }),
     viteCompression({ 
@@ -22,5 +29,9 @@ export default defineConfig({
   }),],
   optimizeDeps: {
     exclude: ['lucide-react'],
+  },
+  build: {
+    ssr: false,
+    minify: 'terser', // Включение минификации для продакшн
   },
 });
