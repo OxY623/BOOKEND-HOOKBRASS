@@ -1,30 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 import './Header.css'
 
 const backgroundImages = [
-  '/public/graces/1000001581.png',
-  '/public/graces/1000001582.png',
-  '/public/graces/1000001583.png',
-  '/public/graces/1000001584.png',
-  '/public/graces/1000001585.png',
-  '/public/graces/1000001586.png',
-  '/public/graces/1000001588.png',
-  '/public/graces/1000001589.png',
-  '/public/graces/1000001596.png',
-  '/public/graces/1000001597.png',
-  '/public/graces/1000001598.png',
-  '/public/graces/1000001600.png',
+  '/graces/1000001581.png',
+  '/graces/1000001582.png',
+  '/graces/1000001583.png',
+  '/graces/1000001584.png',
+  '/graces/1000001585.png',
+  '/graces/1000001586.png',
+  '/graces/1000001588.png',
+  '/graces/1000001589.png',
+  '/graces/1000001596.png',
+  '/graces/1000001597.png',
+  '/graces/1000001598.png',
+  '/graces/1000001600.png',
 ];
 
 type Props = {
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
   isLoading: boolean;
+  onScroll: () => void;
 };
 
-function Header({isLoading, setIsLoading}:Props) {
+function Header({isLoading, setIsLoading, onScroll}:Props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  
  
 
   useEffect(() => {
@@ -92,7 +94,7 @@ function Header({isLoading, setIsLoading}:Props) {
           <div
             key={index}
             className={`absolute inset-0 bg-contain bg-no-repeat bg-center transition-all duration-1500 ease-in-out ${
-              index === currentImageIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+              index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
             }`}
             style={{
               backgroundImage: `url("${image}")`,
@@ -152,7 +154,7 @@ function Header({isLoading, setIsLoading}:Props) {
               crafting tomorrow's antiques today
             </p>
           </div>
-          <button title="See more details" className="absolute animate-bounce bottom-9 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 group"
+          <button onClick={onScroll} title="See more details" className="absolute animate-bounce bottom-9 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 group"
             aria-label="See more details">
           <ChevronDown className=" w-6 h-6 md:w-8 md:h-8  text-white/80" />
           </button>

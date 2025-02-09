@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ChevronDown, Mail, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Header } from './widgets/Header';
 
@@ -196,6 +196,11 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   if (isLoading) {
     return (
@@ -232,7 +237,7 @@ function App() {
           <ChevronDown className="absolute bottom-12 w-8 h-8 animate-bounce" />
         </div>
       </header> */}
-      <Header isLoading={isLoading} setIsLoading={setIsLoading} />
+      <Header onScroll={handleScroll} isLoading={isLoading} setIsLoading={setIsLoading} />
 
       {/* Introduction */}
       <section className="py-24 px-4 bg-[#f9f6f0]">
@@ -246,9 +251,12 @@ function App() {
           </p>
         </div>
       </section>
-
+      
       {/* Collections */}
-      <GallerySection title="BOOKEND COLLECTION" items={bookendCollection} />
+      <div ref={sectionRef}>
+         <GallerySection   title="BOOKEND COLLECTION" items={bookendCollection} />
+      </div>
+      
       <div className="h-px bg-[#e5e1d8]" />
       <GallerySection title="HOOKBRASS COLLECTION" items={hookbrassCollection} />
 
