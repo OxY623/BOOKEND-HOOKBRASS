@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Merriweather', serif !important;
+}
+
 @keyframes fadeIn {
          from {
            opacity: 0;

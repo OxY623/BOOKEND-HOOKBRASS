@@ -51,16 +51,16 @@ export const bookendCollection: GalleryItem[] = [
 export const hookbrassCollection: GalleryItem[] = [
   {
     src: "/hooksbrass/IMG_0891.JPG",
-    title: "The Noble Emperor Hook",
+    title: "The Wawel head, hook brass",
     description: "A regal hook designed in the likeness of an ancient king or nobleman. With its detailed craftsmanship, this hook evokes the splendor and grandeur of classical royalty. Whether used for coats, hats, or decorative purposes, it brings a touch of aristocratic elegance to any room. Perfect for adding a historical flair to your entryway, hallway, or study, this piece combines functionality with the timeless beauty of ancient nobility. It’s an ideal choice for those who appreciate the fusion of utility and art in their home decor.",
     price: "$66"
   },
-  {
-    src: "/hooksbrass/IMG_0892.jpg",
-    title: "Warrior's Valor Hook",
-    description: "This striking hook takes the form of an ancient warrior, evoking the strength, bravery, and honor of legendary fighters. Crafted with intricate details, it showcases the stoic stance and power of a warrior in armor, symbolizing protection and courage. Perfect for adding a bold, historical touch to any space, this hook brings an air of ancient heroism to your home. Whether placed in an entryway, bedroom, or study, it serves as both a functional piece and a tribute to the spirit of warriors from a bygone era.",
-    price: "$66"
-  },
+  // {
+  //   src: "/hooksbrass/IMG_0892.jpg",
+  //   title: "Warrior's Valor Hook",
+  //   description: "This striking hook takes the form of an ancient warrior, evoking the strength, bravery, and honor of legendary fighters. Crafted with intricate details, it showcases the stoic stance and power of a warrior in armor, symbolizing protection and courage. Perfect for adding a bold, historical touch to any space, this hook brings an air of ancient heroism to your home. Whether placed in an entryway, bedroom, or study, it serves as both a functional piece and a tribute to the spirit of warriors from a bygone era.",
+  //   price: "$66"
+  // },
   {
     src: "/hooksbrass/IMG_4375.jpg",
     title: "Antique Hummingbird Hook",
