@@ -53,28 +53,7 @@ function App() {
   return (
     <div className="bg-[#f9f6f0] min-h-screen">
       {/* Hero Section */}
-      {/* <header className="relative h-screen">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("https://hookbrass.com/images/1920.jpg")',
-          }}
-        >
-          <div className="absolute inset-0 bg-[#1a1814]/50" />
-        </div>
-        
-        <div className="relative h-full flex flex-col items-center justify-center text-[#e5e1d8] px-4">
-          <h1 className="text-6xl md:text-7xl font-light tracking-wider mb-6 text-center">
-            BOOKEND & HOOKBRASS
-          </h1>
-          <p className="text-xl md:text-2xl font-light tracking-wide text-center max-w-3xl">
-            Exquisite bas-relief artworks in bronze and brass, 
-            crafting tomorrow's antiques today
-          </p>
-          <ChevronDown className="absolute bottom-12 w-8 h-8 animate-bounce" />
-        </div>
-      </header> */}
-      <Header onScroll={handleScroll} isLoading={isLoading} setIsLoading={setIsLoading} />
+     <Header onScroll={handleScroll} isLoading={isLoading} setIsLoading={setIsLoading} />
 
       {/* Introduction */}
       <section className="py-24 px-4 bg-[#e5e1d8]">
@@ -87,7 +66,7 @@ function App() {
             Each piece is meticulously created to become a timeless addition to your collection.
           </p>
           {/* <a href="#contact" className ="text-2xl hover:scale-105 transition-transform duration-300 text-[#5c5648] pointer focus:outline-none focus:ring focus:ring-violet-300 underline-offset-4 hover:text-yellow-600 underline">Connect With Us</a> */}
-          <a href="#contact" className ="text-white hover:text-[#34a798]  duration-300 px-[31px] py-[13px] rounded-sm hover:bg-[#e5e1d8] bg-[#34a798] ease-in-out transparent-all focus:outline-none focus:ring focus:ring-violet-300 border-[#34a798] border-2 border-[#34a798]-200">Connect With Us</a>
+          <a href="#contact" className ="text-white hover:text-[#34a798]  duration-300 px-[31px] text-2xl py-[13px] rounded-sm hover:bg-[#e5e1d8] bg-[#34a798] ease-in-out transparent-all focus:outline-none focus:ring focus:ring-violet-300 border-[#34a798] border-2 border-[#34a798]-200">Connect With Us</a>
         </div>
       </section>
       
