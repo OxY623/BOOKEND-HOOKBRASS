@@ -1,2 +1,2 @@
-import { GallerySection } from "./GallerySection";
-export {GallerySection}
+import GallerySection  from "./GallerySection";
+export default GallerySection

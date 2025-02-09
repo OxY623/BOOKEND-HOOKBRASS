@@ -46,4 +46,4 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
   );
 }
 
-export {GallerySection}
+export default GallerySection

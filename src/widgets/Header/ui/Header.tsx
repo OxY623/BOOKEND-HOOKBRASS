@@ -1,21 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { backgroundImages } from '../../../shared/assets/data';
 import { ChevronDown, ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 import './Header.css'
 
-const backgroundImages = [
-  '/graces/1000001581.png',
-  '/graces/1000001582.png',
-  '/graces/1000001583.png',
-  '/graces/1000001584.png',
-  '/graces/1000001585.png',
-  '/graces/1000001586.png',
-  '/graces/1000001588.png',
-  '/graces/1000001589.png',
-  '/graces/1000001596.png',
-  '/graces/1000001597.png',
-  '/graces/1000001598.png',
-  '/graces/1000001600.png',
-];
+
 
 type Props = {
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,24 +15,61 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   
- 
-
   useEffect(() => {
-    // Preload images
-    Promise.all(
-      backgroundImages.map((src) => {
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = resolve;
-        });
-      })
-    ).then(() => {
-      setIsLoading(false);
-    }).finally(() => {
-             setIsLoading(false);
-    });
-  }, [isLoading, setIsLoading]);
+    let isMounted = true;
+  
+    const preloadImages = async () => {
+      try {
+        await Promise.all(
+          backgroundImages.map(
+            (src) =>
+              new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = () => resolve(src);
+                img.onerror = (err) => {
+                  console.error(`Ошибка загрузки изображения: ${src}`, err);
+                  reject(err); // Не прерываем цепочку, а просто логируем
+                };
+              })
+          )
+        );
+      } catch (error) {
+        console.error("Image preload failed", error);
+      } finally {
+        if (isMounted) {
+          console.log("Все изображения загружены, отключаем isLoading");
+          setIsLoading(false);
+        }
+      }
+    };
+  
+    preloadImages();
+  
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+  
+  
+  
+
+  // useEffect(() => {
+  //   // Preload images
+  //   Promise.all(
+  //     backgroundImages.map((src) => {
+  //       return new Promise((resolve) => {
+  //         const img = new Image();
+  //         img.src = src;
+  //         img.onload = resolve;
+  //       });
+  //     })
+  //   ).then(() => {
+  //     setIsLoading(false);
+  //   }).finally(() => {
+  //            setIsLoading(false);
+  //   });
+  // }, [isLoading, setIsLoading]);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
