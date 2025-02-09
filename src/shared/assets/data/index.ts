@@ -74,7 +74,7 @@ export const bookendCollection: GalleryItem[] = [
        
 export const hookbrassCollection: GalleryItem[] = [
          {
-           src: "/hooksbrass/IMG_0891.JPG",
+           src: "/hooksbrass/IMG_000.JPG",
            title: "Wawel King, hook brass",
            description: "A majestic brass hook inspired by ancient royalty. Perfect for adding a noble touch to any space.",
            price: "$66"
