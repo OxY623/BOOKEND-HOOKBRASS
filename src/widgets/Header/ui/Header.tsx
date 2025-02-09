@@ -153,17 +153,17 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
               <br className="hidden sm:block" />
               crafting tomorrow's antiques today
             </p> */}
-            <h1 className="bg-gray-200/10 rounded-lg text-4xl text-white hover:shadow-lg sm:text-5xl md:text-7xl font-light tracking-[0.2em] mb-6 transition-all duration-700 animate-fade-in">
+            <h1 className="rounded-lg text-4xl text-white  sm:text-5xl md:text-7xl font-light tracking-[0.2em] mb-6 transition-all duration-700 animate-fade-in">
               BOOKEND & HOOKBRASS
             </h1>
-           <p className="bg-gray-200/10 rounded-lg text-lg sm:text-xl md:text-2xl text-white hover:shadow-lg font-light tracking-wider max-w-3xl mx-auto leading-relaxed text-white/90">
+           <p className="rounded-lg text-lg sm:text-xl md:text-2xl text-white  font-light tracking-wider max-w-3xl mx-auto leading-relaxed text-white/90">
                  Exquisite bas-relief artworks in bronze and brass,
             <br className="hidden sm:block" />
               crafting tomorrow's antiques today
             </p>
 
           </div>
-          <button onClick={onScroll} title="See more details" className="absolute animate-bounce bottom-9 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 group"
+          <button onClick={onScroll} title="See more details" className="absolute animate-bounce bottom-5 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 hover:text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 group"
             aria-label="See more details">
           <ChevronDown className=" w-6 h-6 md:w-8 md:h-8  text-white/80" />
           </button>
