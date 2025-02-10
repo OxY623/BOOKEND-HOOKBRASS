@@ -119,7 +119,7 @@ function Header({  onScroll }: Props) {
 
       <button
         onClick={toggleAutoPlay}
-        className="absolute top-8 right-8 z-50 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all"
+        className=" focus:outline-none focus:ring focus:ring-violet-300 absolute top-8 right-8 z-50 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all"
         aria-label={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
       >
         {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
@@ -128,14 +128,14 @@ function Header({  onScroll }: Props) {
       <div className="absolute z-30 inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 md:px-8 pointer-events-none">
         <button
           onClick={handlePrevious}
-          className="pointer-events-auto z-100 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all group"
+          className=" focus:outline-none focus:ring focus:ring-violet-300 pointer-events-auto z-100 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all group"
           aria-label="Previous image"
         >
           <ArrowLeft className="w-6 h-6 md:w-8 md:h-8 transform group-hover:-translate-x-1 transition-transform" />
         </button>
         <button
           onClick={handleNext}
-          className="pointer-events-auto z-100 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all group"
+          className=" focus:outline-none focus:ring focus:ring-violet-300 pointer-events-auto z-100 bg-black/20 hover:bg-black/40 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all group"
           aria-label="Next image"
         >
           <ArrowRight className="w-6 h-6 md:w-8 md:h-8 transform group-hover:translate-x-1 transition-transform" />
@@ -155,7 +155,7 @@ function Header({  onScroll }: Props) {
         </div>
         <button
           onClick={onScroll}
-          className="absolute animate-bounce bottom-5 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all"
+          className=" focus:outline-none focus:ring focus:ring-violet-300 absolute animate-bounce bottom-5 z-30 pointer-events-auto bg-black/20 hover:bg-green-500 text-white/80 p-2 rounded-full backdrop-blur-sm transition-all"
           aria-label="See more details"
         >
           <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-white/80" />

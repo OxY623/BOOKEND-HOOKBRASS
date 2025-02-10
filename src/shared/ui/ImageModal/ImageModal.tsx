@@ -22,7 +22,7 @@ function ImageModal({
         <button 
           title="Close"
           onClick={onClose}
-          className="absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full top-11 sm:top-4 right-4 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10"
+          className=" focus:outline-none focus:ring focus:ring-violet-300 absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full top-11 sm:top-4 right-4 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10"
         >
           <X className="w-8 h-8" />
         </button>
@@ -32,7 +32,7 @@ function ImageModal({
             <button 
               title="Previous"
               onClick={onPrevious}
-              className="absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full left-4 top-1/2 transform -translate-y-1/2 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10 md:left-8"
+              className=" focus:outline-none focus:ring focus:ring-violet-300 absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full left-4 top-1/2 transform -translate-y-1/2 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10 md:left-8"
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
@@ -42,7 +42,7 @@ function ImageModal({
             <button 
               title="Next"
               onClick={onNext}
-              className="absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full right-4 top-1/2 transform -translate-y-1/2 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10 md:right-8"
+              className=" focus:outline-none focus:ring focus:ring-violet-300 absolute bg-[#1a1814]/90 p-1  md:bg-transparent rounded-full right-4 top-1/2 transform -translate-y-1/2 text-[#e5e1d8] hover:text-[#c2beb6] transition-colors z-10 md:right-8"
             >
               <ChevronRight className="w-8 h-8" />
             </button>

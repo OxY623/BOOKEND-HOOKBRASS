@@ -42,7 +42,7 @@ function App() {
       </section>
       
       {/* Collections */}
-      <Suspense fallback={<div><WaveLoader /></div>}>
+      <Suspense fallback={<div className='flex items-center justify-center'><WaveLoader /></div>}>
       <div ref={sectionRef}>
       
          <GallerySection   title="BOOKEND COLLECTION" items={bookendCollection} />
