@@ -17,6 +17,7 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
               onClick={() => setSelectedIndex(index)}
             >
               <img 
+                loading="lazy"
                 src={item.src} 
                 alt={item.title}
                 className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
