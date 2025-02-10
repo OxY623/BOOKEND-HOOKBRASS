@@ -1,4 +1,4 @@
-import  { useState, useRef, Suspense, lazy } from 'react';
+import  { useState, useRef, Suspense, lazy, useEffect, useCallback } from 'react';
 import { ChevronDown, Mail, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Header } from './widgets/Header';
 import { Footer } from './widgets/Footer';
@@ -23,13 +23,16 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 2000); // Здесь 2 секунды для демонстрации, замените на ваш реальный процесс загрузки
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   if (isLoading) {
     return (
@@ -46,7 +49,9 @@ function App() {
   return (
     <div className="bg-[#f9f6f0] min-h-screen">
       {/* Hero Section */}
-     <Header onScroll={handleScroll} isLoading={isLoading} setIsLoading={setIsLoading} />
+     <Header onScroll={handleScroll} 
+      setIsLoading={setIsLoading} 
+     />
 
       {/* Introduction */}
       <section className="py-24 px-4 bg-[#e5e1d8]">
@@ -58,25 +63,25 @@ function App() {
             Our hand-crafted bas-relief works in bronze and brass transform spaces into galleries of refined elegance. 
             Each piece is meticulously created to become a timeless addition to your collection.
           </p>
-          {/* <a href="#contact" className ="text-2xl hover:scale-105 transition-transform duration-300 text-[#5c5648] pointer focus:outline-none focus:ring focus:ring-violet-300 underline-offset-4 hover:text-yellow-600 underline">Connect With Us</a> */}
           <a href="#contact" className ="text-white hover:text-[#34a798]  duration-300 px-[31px] text-2xl py-[13px] rounded-sm hover:bg-[#e5e1d8] bg-[#34a798] ease-in-out transparent-all focus:outline-none focus:ring focus:ring-violet-300 border-[#34a798] border-2 border-[#34a798]-200">Connect With Us</a>
         </div>
       </section>
       
       {/* Collections */}
-      <div ref={sectionRef}>
       <Suspense fallback={<div><WaveLoader /></div>}>
+      <div ref={sectionRef}>
+      
          <GallerySection   title="BOOKEND COLLECTION" items={bookendCollection} />
-      </Suspense>
+     
       </div>
       
       <div className="h-px bg-[#e5e1d8]" />
       <div>
-      <Suspense fallback={<div><WaveLoader /></div>}>
-        <GallerySection title="HOOKBRASS COLLECTION" items={hookbrassCollection} />
-      </Suspense>
-      </div>
       
+        <GallerySection title="HOOKBRASS COLLECTION" items={hookbrassCollection} />
+     
+      </div>
+      </Suspense>
 
       {/* Contact */}
       <section id="contact" className="py-20 bg-[#2c2820] text-[#e5e1d8]">
