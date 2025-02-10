@@ -1,8 +1,10 @@
-import React, { useState, useRef, Suspense, lazy } from 'react';
+import  { useState, useRef, Suspense, lazy } from 'react';
 import { ChevronDown, Mail, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Header } from './widgets/Header';
-// import { GallerySection } from './widgets/GallerySection/ui';
+import { Footer } from './widgets/Footer';
+import { WaveLoader } from './shared/ui/WaveLoader/WaveLoader';
 import { hookbrassCollection, bookendCollection } from './shared/assets/data';
+
 
 const GallerySection = lazy(() => import('./widgets/GallerySection/ui'));
 export interface GalleryItem {
@@ -14,16 +16,7 @@ export interface GalleryItem {
 
 
 
-const WaveLoader = () => {
-  return (
-    <div className="flex space-x-1">
-      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></span>
-      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce [animation-delay:0.2s]"></span>
-      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce [animation-delay:0.4s]"></span>
-      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce [animation-delay:0.6s]"></span>
-    </div>
-  );
-};
+
 
 
 function App() {
@@ -106,13 +99,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#1a1814] text-[#8a8578]">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Bookend & Hookbrass. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

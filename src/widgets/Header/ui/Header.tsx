@@ -7,9 +7,9 @@ import { BackgroundImage } from '../../../shared/ui/BackgroundImage/BackgroundIm
 
 
 type Props = {
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  isLoading: boolean;
-  onScroll: () => void;
+  setIsLoading?: React.Dispatch<React.SetStateAction<boolean>>;
+  isLoading?: boolean;
+  onScroll?: () => void;
 };
 
 function Header({isLoading, setIsLoading, onScroll}:Props) {
@@ -118,17 +118,6 @@ function Header({isLoading, setIsLoading, onScroll}:Props) {
         {/* Background images */}
         {backgroundImages.map((image, index) => (
            <BackgroundImage key={index} src={image} isVisible={index === currentImageIndex} />
-          // <div
-          //   key={index}
-          //   className={`absolute inset-0 bg-contain bg-no-repeat bg-center transition-all duration-1500 ease-in-out ${
-          //     index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
-          //   }`}
-          //   style={{
-          //     backgroundImage: `url("${image}")`,
-          //   }}
-          // >
-          //   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
-          // </div>
         ))}
 
         {/* Current image number */}
