@@ -11,6 +11,7 @@ import imageminWebp from 'imagemin-webp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'/BOOKEND-HOOKBRASS/',
   plugins: [react(), 
     svgr(), 
     viteImagemin({
