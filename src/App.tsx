@@ -1,5 +1,5 @@
-import  { useState, useRef, Suspense, lazy, useEffect, useCallback } from 'react';
-import { ChevronDown, Mail, Instagram, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import  {  useRef, Suspense, lazy, useCallback } from 'react';
+import {  Mail, Instagram,  } from 'lucide-react';
 import { Header } from './widgets/Header';
 import { Footer } from './widgets/Footer';
 import { WaveLoader } from './shared/ui/WaveLoader/WaveLoader';
@@ -15,38 +15,17 @@ export interface GalleryItem {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = useCallback(() => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  //   return () => clearTimeout(timeout);
-  // }, []);
-
-  // if (isLoading) {
-  //   return (
-  //     <div className="min-h-screen flex-col flex items-center justify-center bg-black">
-  //       <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
-  //          Loading
-  //        </div> 
-  //       <WaveLoader />
-  //     </div>
-  //   );
-  // }
-
-
   return (
     <div className="bg-[#f9f6f0] min-h-screen">
       {/* Hero Section */}
-     <Header onScroll={handleScroll} 
-      setIsLoading={setIsLoading} 
-     />
+     <Header onScroll={handleScroll} />
 
       {/* Introduction */}
       <section className="py-24 px-4 bg-[#e5e1d8]">

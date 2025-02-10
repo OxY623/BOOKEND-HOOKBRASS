@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { backgroundImages } from "../../../shared/assets/data";
 import { ChevronDown, ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { BackgroundImage } from "../../../shared/ui/BackgroundImage/BackgroundImage";
+import { WaveLoader } from "../../../shared/ui/WaveLoader/WaveLoader";
 
 type Props = {
   setIsLoading?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,9 +12,10 @@ type Props = {
 
 const AUTO_PLAY_INTERVAL = 5000;
 
-function Header({ setIsLoading, onScroll }: Props) {
+function Header({  onScroll }: Props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -33,7 +35,7 @@ function Header({ setIsLoading, onScroll }: Props) {
         );
       } finally {
         if (isMounted) setIsLoading?.(false);
-      }
+       }
     };
 
     preloadImages();
@@ -91,6 +93,17 @@ function Header({ setIsLoading, onScroll }: Props) {
       )),
     [currentImageIndex]
   );
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex-col flex items-center justify-center bg-grey">
+        <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
+           Loading
+         </div> 
+        <WaveLoader />
+      </div>
+    );
+  }
 
   return (
     <header className="relative h-screen overflow-hidden">
