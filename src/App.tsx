@@ -14,11 +14,6 @@ export interface GalleryItem {
   price: string;
 }
 
-
-
-
-
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,23 +22,23 @@ function App() {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timeout);
-  }, []);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex-col flex items-center justify-center bg-black">
-        <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
-           Loading
-         </div> 
-        <WaveLoader />
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="min-h-screen flex-col flex items-center justify-center bg-black">
+  //       <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
+  //          Loading
+  //        </div> 
+  //       <WaveLoader />
+  //     </div>
+  //   );
+  // }
 
 
   return (

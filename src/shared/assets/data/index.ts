@@ -1,3 +1,5 @@
+import { GalleryItem } from "../../../App";
+
 export const backgroundImages = [
   '/graces/1000001581.png',
   '/graces/1000001582.png',
