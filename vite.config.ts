@@ -31,7 +31,15 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
-  //   ssr: false,
-  minify: 'terser', // Включение минификации для продакшн
- },
+  minify: 'terser',
+  rollupOptions: {
+    output: {
+      manualChunks(id) {
+        if (id.includes('node_modules')) {
+          return id.split('node_modules/')[1].split('/')[0]; 
+        }
+      },
+    },
+  },
+  },
 });
