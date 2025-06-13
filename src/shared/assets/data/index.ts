@@ -75,12 +75,7 @@ export const bookendCollection: GalleryItem[] = [
        
        
 export const hookbrassCollection: GalleryItem[] = [
-         {
-           src: "/hooksbrass/IMG_000.JPG",
-           title: "Wawel King, hook brass",
-           description: "A majestic brass hook inspired by ancient royalty. Perfect for adding a noble touch to any space.",
-           price: "$66"
-         },
+         
          {
            src: "/hooksbrass/IMG_0858~2.JPG",
            title: "Warrior's, hook brass",
@@ -92,5 +87,49 @@ export const hookbrassCollection: GalleryItem[] = [
            title: "Hummingbird, hook brass",
            description: "An intricately designed brass hook featuring a delicate hummingbird. A timeless vintage charm.",
            price: "$66"
-         }
+         },
+         
+         {
+           src: "/hooksbrass/hookbrass_06.jpg",
+           title: "Greco-Roman Bust Wall Hook, hook brass",
+           description: "A decorative brass bust, resembling classical Greco-Roman sculpture, mounted within a dark framed shadow box, functioning as a unique wall hook.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/IMG_000.JPG",
+           title: "Wawel King, hook brass",
+           description: "A majestic brass hook inspired by ancient royalty. Perfect for adding a noble touch to any space.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/hookbrass_05.jpg",
+           title: "Brass Head Hook, hook brass",
+           description: "A decorative brass hook featuring a detailed human-like head at its mounting end.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/hookbrass_04.jpg",
+           title: "Brass Figural Head Hook, hook brass",
+           description: "A decorative brass hook featuring a finely sculpted human head with a flat top, serving as a unique wall accent.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/hookbrass_03.jpg",
+           title: "Brass Renaissance Head Hook, hook brass",
+           description: " A distinctive brass hook featuring a sculpted head of a bearded man wearing a beret, crafted for decorative hanging.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/hookbrass_02.jpg",
+           title: "Brass Capped Head Hook, hook brass",
+           description: "A decorative brass hook featuring a sculpted male head wearing a flat cap, designed for unique wall hanging.",
+           price: "$66"
+         },
+         {
+           src: "/hooksbrass/hookbrass_01.jpg",
+           title: " Brass Character Head Hook, hook brass",
+           description: " A distinctive brass hook featuring a sculpted male head with expressive, rugged features, designed as a unique wall hanger.",
+           price: "$66"
+         },
+
        ];
