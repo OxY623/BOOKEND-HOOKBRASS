@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { backgroundImages } from "../../../shared/assets/data";
 import { ChevronDown, ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { BackgroundImage } from "../../../shared/ui/BackgroundImage/BackgroundImage";
-import { WaveLoader } from "../../../shared/ui/WaveLoader/WaveLoader";
+//import { WaveLoader } from "../../../shared/ui/WaveLoader/WaveLoader";
+import Loader from "../../../shared/ui/Loader/Loader";
 
 type Props = {
   setIsLoading?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -97,10 +98,11 @@ function Header({  onScroll }: Props) {
   if (isLoading) {
     return (
       <div className="min-h-screen flex-col flex items-center justify-center bg-grey">
-        <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
+        {/* <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
            Loading
          </div> 
-        <WaveLoader />
+        <WaveLoader /> */}
+        <Loader />
       </div>
     );
   }
