@@ -3,7 +3,8 @@ import {  Mail, Instagram,  } from 'lucide-react';
 import { Header } from './widgets/Header';
 import { Footer } from './widgets/Footer';
 import { WaveLoader } from './shared/ui/WaveLoader/WaveLoader';
-import { hookbrassCollection, bookendCollection } from './shared/assets/data';
+//import Loader from './shared/ui/Loader/Loader';
+import { hookbrassCollection, bookendCollection, wawelCastleCollection } from './shared/assets/data';
 
 
 const GallerySection = lazy(() => import('./widgets/GallerySection/ui'));
@@ -53,6 +54,12 @@ function App() {
       <div>
       
         <GallerySection title="HOOKBRASS COLLECTION" items={hookbrassCollection} />
+     
+      </div>
+
+      <div>
+      
+        <GallerySection title={"Wawel castle head. Replica".toUpperCase()} items={wawelCastleCollection} />
      
       </div>
       </Suspense>

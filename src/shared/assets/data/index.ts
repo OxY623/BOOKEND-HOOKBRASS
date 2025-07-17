@@ -89,12 +89,7 @@ export const hookbrassCollection: GalleryItem[] = [
            price: "$66"
          },
          
-         {
-           src: "/hooksbrass/hookbrass_06.jpg",
-           title: "Greco-Roman Bust Wall Hook, hook brass",
-           description: "A decorative brass bust, resembling classical Greco-Roman sculpture, mounted within a dark framed shadow box, functioning as a unique wall hook.",
-           price: "$66"
-         },
+      
          {
            src: "/hooksbrass/IMG_000.JPG",
            title: "Wawel King, hook brass",
@@ -133,3 +128,25 @@ export const hookbrassCollection: GalleryItem[] = [
          },
 
        ];
+
+export const wawelCastleCollection: GalleryItem[] = [
+     {
+           src: "/wawelCastleHead/photo_2025-07-17_10-11-0267.jpg", 
+           title: "Greco-Roman Bust Wall Hook, Wawel Castle Head. Replica 1-33",
+           description: "A decorative brass bust, resembling classical Greco-Roman sculpture, mounted within a dark framed shadow box, functioning as a unique wall hook.",
+           price: "$66"
+         },
+         {
+           src: "/wawelCastleHead/photo_2025-07-17_10-11-02.jpg",
+           title: "Turbaned Brass Head Wall Hook, Wawel Castle Head. Replica 1-33",
+           description: "A whimsical brass wall hook featuring a bearded figure in a turquoise turban with a golden accent, mounted in a dark shadow box with a metallic frame — blending classical style with eclectic charm.",
+           price: "$66"
+},
+{
+           src: "/wawelCastleHead/photo_2025-07-17_10-11-02 (2).jpg",
+           title: "Stoic Bust Wall Hook, Wawel Castle Head. Replica 1-33",
+           description: "A stylized brass head with a calm expression and a patinated green collar, framed in a warm-toned shadow box — a functional piece of sculptural wall art.",
+           price: "$66"
+}
+
+];
