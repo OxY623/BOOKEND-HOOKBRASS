@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "BOOKEND & HOOKBRASS",
+    "subtitle": "Exquisite bas-relief artworks in bronze and brass,",
+    "subtitleLine2": "crafting tomorrow's antiques today",
+    "ariaLabels": {
+      "pauseSlideshow": "Pause slideshow",
+      "playSlideshow": "Play slideshow",
+      "previousImage": "Previous image",
+      "nextImage": "Next image",
+      "seeMoreDetails": "See more details",
+      "goToImage": "Go to image {{index}}"
+    }
+  },
+  "intro": {
+    "title": "Crafting Elegance in Metal",
+    "description": "Our hand-crafted bas-relief works in bronze and brass transform spaces into galleries of refined elegance. Each piece is meticulously created to become a timeless addition to your collection.",
+    "connectButton": "Connect With Us"
+  },
+  "collections": {
+    "bookend": "BOOKEND COLLECTION",
+    "hookbrass": "HOOKBRASS COLLECTION",
+    "wawelCastle": "WAWEL CASTLE HEAD. REPLICA"
+  },
+  "contact": {
+    "title": "Connect With Us",
+    "email": "hookbrass@gmail.com",
+    "instagram": "@hookbrass3"
+  },
+  "footer": {
+    "copyright": "© {{year}} Bookend & Hookbrass. All rights reserved.",
+    "createdBy": "Created with AI assistance by"
+  }
+}
+

@@ -1,6 +1,14 @@
 User-agent: *
+Allow: /
+
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /checkout/
 Disallow: /cart/
+Disallow: /api/
 
-Allow: /
+# Sitemap location
+Sitemap: https://bookend-hookbrass.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

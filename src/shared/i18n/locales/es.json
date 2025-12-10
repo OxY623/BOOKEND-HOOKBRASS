@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "BOOKEND & HOOKBRASS",
+    "subtitle": "Exquisitas obras de bajorrelieve en bronce y latón,",
+    "subtitleLine2": "creando las antigüedades del mañana hoy",
+    "ariaLabels": {
+      "pauseSlideshow": "Pausar presentación",
+      "playSlideshow": "Reproducir presentación",
+      "previousImage": "Imagen anterior",
+      "nextImage": "Imagen siguiente",
+      "seeMoreDetails": "Ver más detalles",
+      "goToImage": "Ir a la imagen {{index}}"
+    }
+  },
+  "intro": {
+    "title": "Creando Elegancia en Metal",
+    "description": "Nuestras obras de bajorrelieve artesanales en bronce y latón transforman espacios en galerías de elegancia refinada. Cada pieza está meticulosamente creada para convertirse en una adición atemporal a su colección.",
+    "connectButton": "Contáctanos"
+  },
+  "collections": {
+    "bookend": "COLECCIÓN BOOKEND",
+    "hookbrass": "COLECCIÓN HOOKBRASS",
+    "wawelCastle": "CABEZA DEL CASTILLO DE WAWEL. RÉPLICA"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "email": "hookbrass@gmail.com",
+    "instagram": "@hookbrass3"
+  },
+  "footer": {
+    "copyright": "© {{year}} Bookend & Hookbrass. Todos los derechos reservados.",
+    "createdBy": "Creado con asistencia de IA por"
+  }
+}
+

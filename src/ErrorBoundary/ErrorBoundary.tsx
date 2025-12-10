@@ -6,11 +6,11 @@ const CustomErrorPage = () => (
       <h1 className="text-4xl font-bold text-[#34a798] mb-4">Something went wrong...</h1>
       <p className="text-lg text-[#34a798] mb-6">Please try to reload the page or go back.</p>
 
-      <div className="space-x-4">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
         {/* Кнопка для перезагрузки страницы */}
         <button
           onClick={() => window.location.reload()}
-          className="  px-6 py-2 text-white bg-[#34a798] rounded-md hover:bg-[#28a485] transition duration-300 focus:outline-none focus:ring focus:ring-violet-300"
+          className="inline-flex items-center justify-center px-6 py-3 text-base font-light tracking-wide text-white bg-[#34a798] hover:bg-[#2a8a7a] dark:hover:bg-[#2a8a7a] rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
         >
           Reboot
         </button>
@@ -18,7 +18,7 @@ const CustomErrorPage = () => (
         {/* Кнопка для возврата назад */}
         <button
           onClick={() => window.history.back()}
-          className="  px-6 py-2 text-[#34a798] border-2 border-[#34a798] rounded-md hover:bg-[#34a798] hover:text-white transition duration-300 focus:outline-none focus:ring focus:ring-violet-300"
+          className="inline-flex items-center justify-center px-6 py-3 text-base font-light tracking-wide text-[#34a798] border-2 border-[#34a798] rounded-lg hover:bg-[#34a798] hover:text-white dark:hover:bg-[#34a798] dark:hover:text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
         >
           Go back
         </button>

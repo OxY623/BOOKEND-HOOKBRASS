@@ -6,19 +6,19 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-[#f4f1ea]">
+    <section className="py-20 bg-[#f4f1ea] dark:bg-[#1a1814] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-light mb-16 text-center tracking-wide text-[#2c2820]">{title}</h2>
+        <h2 className="text-4xl font-light mb-16 text-center tracking-wide text-[#2c2820] dark:text-[#e5e1d8] transition-colors duration-300">{title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative overflow-hidden cursor-pointer"
               onClick={() => setSelectedIndex(index)}
             >
-              <img 
+              <img
                 loading="lazy"
-                src={item.src} 
+                src={item.src}
                 alt={item.title}
                 className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -34,7 +34,7 @@ function GallerySection({ title, items }: { title: string; items: GalleryItem[] 
       </div>
 
       {selectedIndex !== null && (
-        <ImageModal 
+        <ImageModal
           item={items[selectedIndex]}
           onClose={() => setSelectedIndex(null)}
           onPrevious={() => setSelectedIndex(prev => Math.max(0, prev! - 1))}
