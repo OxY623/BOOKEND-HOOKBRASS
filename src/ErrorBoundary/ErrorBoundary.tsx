@@ -10,7 +10,10 @@ const CustomErrorPage = () => (
         {/* Кнопка для перезагрузки страницы */}
         <button
           onClick={() => window.location.reload()}
-          className="inline-flex items-center justify-center px-6 py-3 text-base font-light tracking-wide text-white bg-[#34a798] hover:bg-[#2a8a7a] dark:hover:bg-[#2a8a7a] rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
+          className="inline-flex items-center justify-center px-6 py-3 text-base font-light tracking-wide
+           text-white bg-[#34a798] hover:bg-[#2a8a7a] dark:hover:bg-[#2a8a7a] rounded-lg shadow-lg 
+           hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none 
+           focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
         >
           Reboot
         </button>
@@ -18,7 +21,11 @@ const CustomErrorPage = () => (
         {/* Кнопка для возврата назад */}
         <button
           onClick={() => window.history.back()}
-          className="inline-flex items-center justify-center px-6 py-3 text-base font-light tracking-wide text-[#34a798] border-2 border-[#34a798] rounded-lg hover:bg-[#34a798] hover:text-white dark:hover:bg-[#34a798] dark:hover:text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
+          className="inline-flex items-center justify-center px-6 py-3 text-base 
+          font-light tracking-wide text-[#34a798] border-2 border-[#34a798] rounded-lg 
+          hover:bg-[#34a798] hover:text-white dark:hover:bg-[#34a798] dark:hover:text-white 
+          shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 
+          focus:outline-none focus:ring-2 focus:ring-[#34a798] focus:ring-offset-2"
         >
           Go back
         </button>

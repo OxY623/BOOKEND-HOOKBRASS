@@ -16,10 +16,6 @@ createRoot(document.getElementById('root')!).render(
       <ThemeProvider>
         <Suspense fallback={
           (<div className="min-h-screen flex-col flex items-center justify-center bg-[#f9f6f0] dark:bg-[#0a0a0a]">
-            {/* <div className="text-blue-600 text-2xl font-bold tracking-wider animate-pulse">
-               Loading
-             </div>
-            <WaveLoader /> */}
             <Loader/>
           </div>)
         }>
