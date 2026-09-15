@@ -6,17 +6,11 @@ import { Footer } from './widgets/Footer';
 import { SEO } from './shared/ui/SEO/SEO';
 import { StructuredData } from './shared/ui/StructuredData/StructuredData';
 import { WaveLoader } from './shared/ui/WaveLoader/WaveLoader';
-//import Loader from './shared/ui/Loader/Loader';
 import { hookbrassCollection, bookendCollection, wawelCastleCollection } from './shared/assets/data';
 
 
 const GallerySection = lazy(() => import('./widgets/GallerySection/ui'));
-export interface GalleryItem {
-  src: string;
-  title: string;
-  description: string;
-  price: string;
-}
+
 
 function App() {
   const { t } = useTranslation();

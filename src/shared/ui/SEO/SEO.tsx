@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 interface SEOProps {
   title?: string;
@@ -12,19 +12,21 @@ interface SEOProps {
 export const SEO = ({
   title,
   description,
-  image = '/og-image.jpg',
-  url = 'https://bookend-hookbrass.com',
-  type = 'website'
+  image = "/web-app-manifest-512x512.png",
+  url = "https://bookend-hookbrass.com",
+  type = "website",
 }: SEOProps) => {
   const { i18n } = useTranslation();
 
-  const defaultTitle = 'Bookend & Hookbrass - Exquisite Bas-Relief Artworks in Bronze and Brass';
-  const defaultDescription = 'Hand-crafted bas-relief works in bronze and brass transform spaces into galleries of refined elegance. Each piece is meticulously created to become a timeless addition to your collection.';
+  const defaultTitle =
+    "Bookend & Hookbrass - Exquisite Bas-Relief Artworks in Bronze and Brass";
+  const defaultDescription =
+    "Hand-crafted bas-relief works in bronze and brass transform spaces into galleries of refined elegance. Each piece is meticulously created to become a timeless addition to your collection.";
 
   const finalTitle = title || defaultTitle;
   const finalDescription = description || defaultDescription;
-  const finalUrl = `${url}${i18n.language !== 'en' ? `/${i18n.language}` : ''}`;
-  const finalImage = image.startsWith('http') ? image : `${url}${image}`;
+  const finalUrl = url || "https://bookend-hookbrass.com";
+  const finalImage = image.startsWith("http") ? image : `${url}${image}`;
 
   return (
     <Helmet>
@@ -32,7 +34,10 @@ export const SEO = ({
       <title>{finalTitle}</title>
       <meta name="title" content={finalTitle} />
       <meta name="description" content={finalDescription} />
-      <meta name="keywords" content="Bookend, Hookbrass, bas-relief, bronze, brass, art, sculpture, home decor, office decor, handcrafted, antiques, collectibles, metalwork, artisanal" />
+      <meta
+        name="keywords"
+        content="Bookend, Hookbrass, bas-relief, bronze, brass, art, sculpture, home decor, office decor, handcrafted, antiques, collectibles, metalwork, artisanal"
+      />
       <meta name="author" content="Bookend & Hookbrass" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content={i18n.language} />
@@ -48,8 +53,14 @@ export const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Bookend & Hookbrass" />
-      <meta property="og:locale" content={i18n.language === 'es' ? 'es_ES' : 'en_US'} />
-      <meta property="og:locale:alternate" content={i18n.language === 'es' ? 'en_US' : 'es_ES'} />
+      <meta
+        property="og:locale"
+        content={i18n.language === "es" ? "es_ES" : "en_US"}
+      />
+      <meta
+        property="og:locale:alternate"
+        content={i18n.language === "es" ? "en_US" : "es_ES"}
+      />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -64,13 +75,10 @@ export const SEO = ({
       <meta name="theme-color" content="#f9f6f0" />
       <meta name="msapplication-TileColor" content="#f9f6f0" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-      {/* Alternate languages */}
-      <link rel="alternate" hreflang="en" href={`${url}/en`} />
-      <link rel="alternate" hreflang="es" href={`${url}/es`} />
-      <link rel="alternate" hreflang="x-default" href={url} />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
     </Helmet>
   );
 };
-
