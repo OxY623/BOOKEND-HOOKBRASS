@@ -11,9 +11,7 @@ export const StructuredData = () => {
     url: "https://bookend-hookbrass.com",
     logo: "https://bookend-hookbrass.com/web-app-manifest-512x512.png",
     description: t("intro.description"),
-
     sameAs: ["https://www.instagram.com/hookbrass3"],
-
     contactPoint: {
       "@type": "ContactPoint",
       email: "hookbrass3@gmail.com",
@@ -23,7 +21,9 @@ export const StructuredData = () => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      <script type="application/ld+json" id="organization-schema">
+        {JSON.stringify(schema)}
+      </script>
     </Helmet>
   );
 };

@@ -33,7 +33,8 @@ class ErrorBoundary extends Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  static getDerivedStateFromError(_error: Error) {
     // Обновляем состояние, чтобы следующий рендер показал fallback UI
     return { hasError: true };
   }

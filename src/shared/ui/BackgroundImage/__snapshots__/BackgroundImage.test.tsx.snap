@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BackgroundImage should render correctly 1`] = `
+<div>
+  <div
+    class="absolute inset-0 bg-contain bg-no-repeat bg-center 
+            transition-all duration-1500 ease-in-out opacity-100 scale-100"
+    data-testid="bg-image"
+    style="background-image: url("#");"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60"
+    />
+  </div>
+</div>
+`;

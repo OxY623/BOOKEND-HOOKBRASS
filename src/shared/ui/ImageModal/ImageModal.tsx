@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { GalleryItem } from "../../../App";
+import { GalleryItem } from "../../assets/types";
 
 function ImageModal({
   item,
@@ -7,7 +7,7 @@ function ImageModal({
   onPrevious,
   onNext,
   hasPrevious,
-  hasNext
+  hasNext,
 }: {
   item: GalleryItem;
   onClose: () => void;
@@ -57,10 +57,16 @@ function ImageModal({
 
         <div className="bg-[#f4f1ea] dark:bg-[#1a1814] p-6 mt-4 transition-colors duration-300">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-2xl font-light text-[#2c2820] dark:text-[#e5e1d8] transition-colors duration-300">{item.title}</h3>
-            <p className="text-xl text-[#5c5648] dark:text-[#c2beb6] transition-colors duration-300">{item.price}</p>
+            <h3 className="text-2xl font-light text-[#2c2820] dark:text-[#e5e1d8] transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-xl text-[#5c5648] dark:text-[#c2beb6] transition-colors duration-300">
+              {item.price}
+            </p>
           </div>
-          <p className="text-[#5c5648] dark:text-[#c2beb6] leading-relaxed transition-colors duration-300">{item.description}</p>
+          <p className="text-[#5c5648] dark:text-[#c2beb6] leading-relaxed transition-colors duration-300">
+            {item.description}
+          </p>
         </div>
       </div>
     </div>
@@ -68,6 +74,3 @@ function ImageModal({
 }
 
 export default ImageModal;
-
-
-

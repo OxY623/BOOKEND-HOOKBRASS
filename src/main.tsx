@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
-import App from "./App.tsx";
-import ErrorBoundary from "./ErrorBoundary/ErrorBoundary.tsx";
+import App from "./App";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 import "./index.css";
-import { ThemeProvider } from "./shared/context/ThemeProvider.tsx";
+import { ThemeProvider } from "./shared/context/ThemeProvider";
 import "./shared/i18n/config";
-import Loader from "./shared/ui/Loader/Loader.tsx";
+import Loader from "./shared/ui/Loader/Loader";
 
 createRoot(document.getElementById("root")!).render(
   <ErrorBoundary>
