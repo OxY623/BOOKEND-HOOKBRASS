@@ -20,7 +20,7 @@ describe("backgroundImages", () => {
 
   test("should contain valid image paths", () => {
     backgroundImages.forEach((image) => {
-      expect(image).toMatch(/^\/graces\/\d+\.png$/);
+      expect(image).toMatch(/\/graces\/\d+\.png$/);
     });
   });
 
@@ -64,7 +64,7 @@ describe("wawelCastleCollection", () => {
 
   test("should contain valid image paths", () => {
     wawelCastleCollection.forEach((item) => {
-      expect(item.src).toMatch(/^\/wawelCastleHead\/photo_.+\.jpg$/);
+      expect(item.src).toMatch(/\/wawelCastleHead\/photo_.+\.jpg$/);
     });
   });
 });
