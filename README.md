@@ -24,6 +24,15 @@
 
 Чтобы собрать production-версию, выполните `npm run build`.
 
+## Storybook
+
+    1. Запустить локальный сервер:
+
+    ```bash
+    npm run storybook
+    ```
+    2. Открыть адрес, который появиться в терминале (обычно `http://localhost:6006`).
+
 ## Декстоп версия сайта
 
 ![Bookend & Hookbrass, декстоп версия](assets/desktop_screen.png)
