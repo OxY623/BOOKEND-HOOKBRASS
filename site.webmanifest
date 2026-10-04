@@ -1,21 +1,28 @@
 {
-  "name": "Bookend & Hookbrass",
+  "name": "Bookend & Hookbrass - Exquisite Bas-Relief Artworks",
   "short_name": "Bookend & Hookbrass",
+  "description": "Hand-crafted bas-relief works in bronze and brass transform spaces into galleries of refined elegance.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#f9f6f0",
+  "background_color": "#f9f6f0",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["art", "shopping", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
 }
