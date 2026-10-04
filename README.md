@@ -23,3 +23,5 @@
 3. Откройте адрес, который появится в терминале (обычно `http://localhost:5173`).
 
 Чтобы собрать production-версию, выполните `npm run build`.
+
+(<Screenshot Bookend & Hookbrass, mobile version>):[./screen.png]
