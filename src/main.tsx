@@ -7,6 +7,9 @@ import "./index.css";
 import { ThemeProvider } from "./shared/context/ThemeProvider";
 import "./shared/i18n/config";
 import Loader from "./shared/ui/Loader/Loader";
+import * as serviceWorker from '../serviceWorker';
+
+
 
 createRoot(document.getElementById("root")!).render(
   <ErrorBoundary>
@@ -25,3 +28,9 @@ createRoot(document.getElementById("root")!).render(
     </HelmetProvider>
   </ErrorBoundary>,
 );
+
+// Service workers are enabled in production builds only.
+serviceWorker.register({
+  onSuccess: () => console.info("App files are cached for offline use."),
+  onUpdate: () => console.info("A new app version is ready; reload to update."),
+});
