@@ -23,5 +23,5 @@
 3. Откройте адрес, который появится в терминале (обычно `http://localhost:5173`).
 
 Чтобы собрать production-версию, выполните `npm run build`.
-
+![Bookend & Hookbrass, декстоп версия](assets/desktop_screen.png)
 ![Bookend & Hookbrass, мобильная версия](assets/screen.png)
