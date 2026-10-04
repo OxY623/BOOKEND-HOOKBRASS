@@ -24,5 +24,4 @@
 
 Чтобы собрать production-версию, выполните `npm run build`.
 
-<img src="./screen.png" alt="Bookend & Hookbrass, мобильная версия" width="400">
-
+![Bookend & Hookbrass, мобильная версия](assets/screen.png)
