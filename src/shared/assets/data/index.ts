@@ -1,7 +1,17 @@
 import { GalleryItem } from "../types";
 
+const getBaseUrl = () => {
+  // Если запущено в Jest, берем из process.env или ставим дефолт
+  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'test') {
+    return process.env.VITE_BASE_URL || '/';
+  }
+  // В браузере (Vite) сработает нативно
+  return import.meta.env.BASE_URL;
+};
+
 const withBaseUrl = (path: string) =>
-  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+  `${getBaseUrl()}${path.replace(/^\/+/, "")}`;
+
 
 export const backgroundImages = [
   '/graces/1000001581.png',
