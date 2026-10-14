@@ -1,11 +1,9 @@
 import type { GalleryItem } from "../types";
 
 const getBaseUrl = () => {
-  // Если запущено в Jest, берем из process.env или ставим дефолт
   if (typeof process !== "undefined" && process.env.NODE_ENV === "test") {
     return process.env.VITE_BASE_URL || "/";
   }
-  // В браузере (Vite) сработает нативно
   return import.meta.env.BASE_URL;
 };
 
