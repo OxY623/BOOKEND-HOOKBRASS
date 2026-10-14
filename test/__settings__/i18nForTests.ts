@@ -12,6 +12,7 @@ i18n.use(initReactI18next).init({
   resources,
   lng: "en",
   fallbackLng: "en",
+  showSupportNotice: false,
   interpolation: { escapeValue: false }, // React сам экранирует
 });
 

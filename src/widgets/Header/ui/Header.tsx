@@ -2,9 +2,9 @@ import { ArrowLeft, ArrowRight, ChevronDown, Pause, Play } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { backgroundImages } from "../../../shared/assets/data";
-import { LanguageToggle } from "../../../shared/ui/LanguageToggle/LanguageToggle";
+import { backgroundImages } from "../../../shared/_assets/data/data";
 import { ThemeToggle } from "../../../shared/ui/ThemeToggle/ThemeToggle";
+import { LanguageToggle } from "./../../../shared/ui/LanguageToggle/LanguageToggle";
 
 const AUTO_PLAY_INTERVAL = 5000;
 
@@ -307,9 +307,10 @@ function Header({ onScroll }: Props) {
               h-2
               rounded-full
               transition-all
-              ${index === currentImageIndex
-                ? "bg-white w-10"
-                : "bg-white/40 w-2"
+              ${
+                index === currentImageIndex
+                  ? "bg-white w-10"
+                  : "bg-white/40 w-2"
               }
             `}
             aria-label={t("header.ariaLabels.goToImage", {

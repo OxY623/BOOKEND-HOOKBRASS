@@ -1,18 +1,27 @@
+import type { Config } from "jest";
+import { ESM_TS_TRANSFORM_PATTERN, TS_EXT_TO_TREAT_AS_ESM } from "ts-jest";
+
 export default {
   preset: "ts-jest",
+  extensionsToTreatAsEsm: [...TS_EXT_TO_TREAT_AS_ESM],
   testEnvironment: "jest-environment-jsdom",
-
+  roots: ["<rootDir>"],
   transform: {
-    "^.+\\.tsx?$": ["ts-jest", { tsconfig: "tsconfig.test.json" }],
+    [ESM_TS_TRANSFORM_PATTERN]: [
+      "ts-jest",
+      {
+        useESM: true,
+        tsconfig: "tsconfig.test.json",
+      },
+    ],
   },
-
   moduleNameMapper: {
     "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.ts",
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
     "^test-utils$": "<rootDir>/test/__utils__/test-utils.tsx",
     "^@/(.*)$": "<rootDir>/src/$1",
   },
-  moduleDirectories: ["node_modules"],
+  moduleDirectories: ["node_modules", "./src"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   moduleFileExtensions: [
     "tsx",
@@ -25,5 +34,5 @@ export default {
     "node",
   ],
   modulePaths: ["<rootDir>/src"],
-  // rootDir лучше не задавать: пусть будет корень проекта
-};
+  resolver: "<rootDir>/custom-resolver.ts",
+} satisfies Config;
